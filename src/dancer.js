@@ -25,6 +25,12 @@ MakeDancer.prototype.setPosition = function(top, left){
     };
     this.$node.css(styleSettings);
   };
+MakeDancer.prototype.lineUp = function(verticalAlign) {
+  var top = this.$node.css('top');
+  var left = this.$node.css('left');
+  this.setPosition(verticalAlign, 100);
+  setTimeout(this.setPosition.bind(this, top, left), 1000);
+};
 
 
 //------------------------------------------------------

@@ -28,10 +28,26 @@ $(document).ready(function(){
       Math.random() * 2000
     );
     $('body').append(dancer.$node);
+
+    dancer.$node.mouseover(function(event){
+    var pos = dancer.$node.position();
+    console.log(pos);
+    var numbers = [-50, 50];
+    pos.top += numbers[Math.round(Math.random())]; 
+    pos.left += numbers[Math.round(Math.random())];
+    console.log(pos);
+    dancer.$node.css(pos);
+  });
+    window.dancers.push(dancer);
   });
 
   $(".lineUpButton").on("click", function(event){
-    
-  })
+    var verticalPos = 80;
+    for(var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp(verticalPos);
+      verticalPos += 80;
+    }
+  });
+
 });
 

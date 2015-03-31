@@ -25,6 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.dancer:hover {
+  cursor: pointer;
+}
 .square{
   -webkit-transition: width 2s, height .5s;
   transition:width 2s, height .5s;
