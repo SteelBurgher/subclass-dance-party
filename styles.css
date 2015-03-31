@@ -26,16 +26,20 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .square{
-  -webkit-transitions:width 2s, height 2s;
-  transitions:width 2s, height 2s;
+  -webkit-transition: width 2s, height .5s;
+  transition:width 2s, height .5s;
   background-color: teal;
   width: 25px;
   height: 25px;
   border-radius: 3px;
   border: none;
 }
-.expand {
+.square.expand {
   width: 60px;
   height: 60px;
+}
+.beyonce {
+  background-image: url('Beyonce.png');
+  background-size: cover;
 }
 
